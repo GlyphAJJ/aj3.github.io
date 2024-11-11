@@ -1,0 +1,733 @@
+@font-face { font-family: derk; src: url('../derk.otf.html'); }
+@font-face { font-family: modes; src: url('../modes.ttf_1.html'); } 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&amp;display=swap');
+
+.noise {
+    z-index: 1
+}
+.fixed-fluid {
+    top: 0;
+    left: 0;
+    opacity: 0.12;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none
+}
+
+html {
+    font-family: 'Roboto Mono', monospace;
+    overflow-y: hidden; 
+    overflow-x: hidden;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+#outerCircleText {
+  color: rgb(252, 252, 252);
+  position: absolute;top: 0;left: 0;z-index: 3000;cursor: default;
+  }
+  #outerCircleText div {position: relative;}
+  #outerCircleText div div {position: absolute;top: 0;left: 0;text-align: center;}
+
+#brand {
+  margin-left: 0.65pc;
+  text-decoration: none;
+  text-shadow: 0 0 0.40em #e4e3e3;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+}
+
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: 'Roboto Mono', monospace;
+}
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: rgb(17, 17, 17);
+}
+.back {
+  width: 100%;
+}
+#overlay-toggle {
+  position:absolute;
+  display: none;
+}
+
+.overlay {
+  z-index: 1;
+  background-color: black;
+}
+.overlay label {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vw;
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+}
+
+.background{
+  padding: 80px 0px;
+}
+.blur{
+  background: rgb(0 0 0 / 40%);
+  backdrop-filter: blur(8px); 
+  width: 100%;
+  max-width: 80%;
+  margin: auto;
+  padding: 30px 0px;
+  margin-top: 80px;
+}
+
+#discord {
+  position: fixed;
+  top: 46.7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Consolas', monospace;
+}
+
+.no-hover {
+  display: block;
+}
+.hover {
+  display: none;
+}
+.fullscreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.sparkle {
+  display: inline-block;
+  background-image: url(../images/sparkle.gif);
+  background-size: contain;
+  padding: 0.1em 0.2em;
+  text-shadow: none; 
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: rgb(29, 29, 29) !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  /*position: relative;*/
+  /*background: #ffffff;*/
+  /*background-color: transparent;*/
+  /*border-radius: 50%;*/
+  /*padding: 15px;*/
+  /*margin: 10px;*/
+  /*height: 50px;*/
+  /*font-size: 18px;*/
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  /*flex-direction: row;*/
+  /*box-shadow: 0 10px 10px rgba(41, 41, 41, 0.1);*/
+  /*cursor: pointer;*/
+  /*transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);*/
+  /*border: 1px solid rgb(5, 5, 5);*/
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    margin-left: 5px;
+    margin-right: 5px;
+
+    width: 40px;
+    overflow: hidden;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.wrapper .icon > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .icon:hover {
+    /* expand */
+    justify-content: center;
+    width: 100px;
+    border-radius: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+/*.wrapper .tooltip {*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  font-size: 14px;*/
+/*  background: #ffffff;*/
+/*  color: #ffffff;*/
+/*  padding: 5px 8px;*/
+/*  border-radius: 5px;*/
+/*  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);*/
+/*  opacity: 0;*/
+/*  pointer-events: none;*/
+/*  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);*/
+/*  margin-left: -25px; !* add negative margin to move tooltip to the left *!*/
+/*}*/
+
+
+/*.wrapper .tooltip::before {*/
+/*  position: absolute;*/
+/*  content: "";*/
+/*  height: 8px;*/
+/*  width: 8px;*/
+/*  background: #ffffff;*/
+/*  bottom: -3px;*/
+/*  left: 50%;*/
+/*  transform: translate(-50%) rotate(45deg);*/
+/*  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);*/
+/*}*/
+
+/*.wrapper .icon:hover .tooltip {*/
+/*  top: -45px;*/
+/*  opacity: 1;*/
+/*  visibility: visible;*/
+/*  pointer-events: auto;*/
+/*}*/
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #CD201F;
+  color: #ffffff;
+}
+
+.wrapper .discord:hover,
+.wrapper .discord:hover .tooltip,
+.wrapper .discord:hover .tooltip::before {
+  background: #5865F2;
+  color: #ffffff;
+}
+
+.wrapper .telegram:hover,
+.wrapper .telegram:hover .tooltip,
+.wrapper .telegram:hover .tooltip::before {
+    background: #CD201F;
+    color: #ffffff;
+}
+
+.wrapper .namemc:hover,
+.wrapper .namemc:hover .tooltip,
+.wrapper .namemc:hover .tooltip::before {
+    background: #1f5ccd;
+    color: #ffffff;
+}
+
+.wrapper .doxbin:hover,
+.wrapper .doxbin:hover .tooltip,
+.wrapper .doxbin:hover .tooltip::before {
+    background: #96a2ae;
+    color: #ffffff;
+}
+
+.wrapper .services:hover,
+.wrapper .services:hover .tooltip,
+.wrapper .services:hover .tooltip::before {
+  background: #7a7a7a;
+  color: #ffffff;
+}
+
+.wrapper .paypal:hover,
+.wrapper .paypal:hover .tooltip,
+.wrapper .paypal:hover .tooltip::before {
+  background: #0079C1;
+  color: #ffffff;
+}
+
+.wrapper .tiktok:hover,
+.wrapper .tiktok:hover .tooltip,
+.wrapper .tiktok:hover .tooltip::before {
+  background: #FE2C55;
+  color: #ffffff;
+}
+
+.wrapper .telegram:hover,
+.wrapper .telegram:hover .tooltip,
+.wrapper .telegram:hover .tooltip::before {
+  background: #229ED9;
+  color: #ffffff;
+}
+
+
+
+
+
+.bg-video {
+  z-index: -1;
+}
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color:#000!important;
+  color:#fff!important
+}
+a {
+  text-decoration:none;
+  color:white!important
+}
+a:hover {
+  transition:.4s!important;
+  color:white!important
+}
+
+#center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Consolas', monospace;
+}
+
+#typing {
+  position: fixed;
+  top: 51.8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Consolas', monospace;
+}
+
+#socials {
+  position: fixed;
+  top: 56.8%;
+  left: 40%;
+  right: 40%;
+  text-align: center;
+  font-family: 'Consolas', monospace;
+}
+
+#overlay-toggle:checked ~ .overlay {
+  animation-fill-mode: forwards;
+  animation-name: fade, hide;
+  animation-delay: 0s, 600ms;
+  animation-duration: 600ms, 1ms;
+}
+#overlay-toggle:checked ~ .overlay label {
+  animation-fill-mode: forwards;
+  animation-name: fade;
+  animation-delay: 0s;
+  animation-duration: 500ms;
+}
+@media(hover: hover) {
+  .hover {
+    display: block;
+  }
+  .no-hover {
+    display: none;
+  }
+}
+@keyframes fade{
+  to {
+    opacity: 0;
+  }
+}
+@keyframes hide {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym46.cur), auto !important;} /* End https://www.cursors-4u.com */
+body{
+    background:white;
+  }
+
+  /* customizable snowflake styling */
+  .snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
+}
+
+@-webkit-keyframes snowflakes-fall {
+    0% {
+        top: -10%
+    }
+
+    100% {
+        top: 100%
+    }
+}
+
+@-webkit-keyframes snowflakes-shake {
+
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    50% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px)
+    }
+}
+
+@keyframes snowflakes-fall {
+    0% {
+        top: -10%
+    }
+
+    100% {
+        top: 100%
+    }
+}
+
+@keyframes snowflakes-shake {
+
+    0%,
+    100% {
+        transform: translateX(0)
+    }
+
+    50% {
+        transform: translateX(80px)
+    }
+}
+
+.snowflake {
+    position: fixed;
+    top: -10%;
+    z-index: 9999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+    -webkit-animation-duration: 10s, 3s;
+    -webkit-animation-timing-function: linear, ease-in-out;
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-play-state: running, running;
+    animation-name: snowflakes-fall, snowflakes-shake;
+    animation-duration: 10s, 3s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-play-state: running, running
+}
+
+.snowflake:nth-of-type(0) {
+    left: 1%;
+    -webkit-animation-delay: 0s, 0s;
+    animation-delay: 0s, 0s
+}
+
+.snowflake:nth-of-type(1) {
+    left: 10%;
+    -webkit-animation-delay: 1s, 1s;
+    animation-delay: 1s, 1s
+}
+
+.snowflake:nth-of-type(2) {
+    left: 20%;
+    -webkit-animation-delay: 6s, .5s;
+    animation-delay: 6s, .5s
+}
+
+.snowflake:nth-of-type(3) {
+    left: 30%;
+    -webkit-animation-delay: 4s, 2s;
+    animation-delay: 4s, 2s
+}
+
+.snowflake:nth-of-type(4) {
+    left: 40%;
+    -webkit-animation-delay: 2s, 2s;
+    animation-delay: 2s, 2s
+}
+
+.snowflake:nth-of-type(5) {
+    left: 50%;
+    -webkit-animation-delay: 8s, 3s;
+    animation-delay: 8s, 3s
+}
+
+.snowflake:nth-of-type(6) {
+    left: 60%;
+    -webkit-animation-delay: 6s, 2s;
+    animation-delay: 6s, 2s
+}
+
+.snowflake:nth-of-type(7) {
+    left: 70%;
+    -webkit-animation-delay: 2.5s, 1s;
+    animation-delay: 2.5s, 1s
+}
+
+.snowflake:nth-of-type(8) {
+    left: 80%;
+    -webkit-animation-delay: 1s, 0s;
+    animation-delay: 1s, 0s
+}
+
+.snowflake:nth-of-type(9) {
+    left: 90%;
+    -webkit-animation-delay: 3s, 1.5s;
+    animation-delay: 3s, 1.5s
+}
+
+.snowflake:nth-of-type(10) {
+    left: 25%;
+    -webkit-animation-delay: 2s, 0s;
+    animation-delay: 2s, 0s
+}
+
+.snowflake:nth-of-type(11) {
+    left: 65%;
+    -webkit-animation-delay: 4s, 2.5s;
+    animation-delay: 4s, 2.5s
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+
+h4 {
+  position: absolute;
+  text-transform: uppercase !important;
+  font-size: 1em !important;
+  font-family: 'VCR OSD Mono', sans-serif !important;
+  padding: 60px;
+  width: 70%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  margin-left: 150px;
+  z-index: 0;
+}
+}
+
+.rainbow {  
+  /* Font options */
+ text-shadow: 2px 2px 4px #000000;
+ 
+  /* Chrome, Safari, Opera */
+ -webkit-animation: rainbow 5s infinite; 
+ 
+ /* Internet Explorer */
+ -ms-animation: rainbow 5s infinite;
+ 
+ /* Standar Syntax */
+ animation: rainbow 5s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+     0%{color: red;}    
+   17%{color: orange;}
+   33%{color: yellow;}
+   50%{color: green;}
+   67%{color: blue;}
+   84%{color: purple;}
+    100%{color: red;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+     0%{color: red;}    
+   17%{color: orange;}
+   33%{color: yellow;}
+   50%{color: green;}
+   67%{color: blue;}
+   84%{color: purple;}
+    100%{color: red;}
+}
+
+/* Standar Syntax */
+@keyframes  rainbow{
+     0%{color: red;}    
+   17%{color: orange;}
+   33%{color: yellow;}
+   50%{color: green;}
+   67%{color: blue;}
+   84%{color: purple;}
+    100%{color: red;}
+}
+
+.logo {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0); 
+  color: #242526;
+  text-align: center;
+}
+
+  .animated {
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animatedfast {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+    -webkit-animation-duration: .75s;
+    animation-duration: .75s;
+}
+
+@-webkit-keyframes swing {
+    50% {
+        -webkit-transform: rotate3d(0, 0, 1, -6deg);
+        transform: rotate3d(0, 0, 1, -6deg);
+    }
+
+    to {
+        -webkit-transform: rotate3d(0, 0, 1, 6deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+@keyframes swing {
+    50% {
+        -webkit-transform: rotate3d(0, 0, 1, -6deg);
+        transform: rotate3d(0, 0, 1, -6deg);
+    }
+
+    to {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+.swing {
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+    animation-name: swing;
+}
+
+.hanginggirl {
+  margin-top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden !important;
+  max-height: 400px;
+  filter: grayscale(1) contrast(200%);
+}
+
+.spoiler {
+  background-color: white;
+  color: white;
+}
+
+.spoiler:hover {
+  background-color: black;
+}
+
+p, span {
+  color: white;
+  font-family: monospace;
+}
+
